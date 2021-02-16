@@ -1,0 +1,14 @@
+.aquaheader {
+    background-color: black !important;
+    color: $theme-primary-text;
+}
+
+
+
+/*Large devices (desktops, 992px and up)*/
+@media (max-width: 1150.98px) 
+{
+    .aquaheader{
+       display: block;
+     }
+}

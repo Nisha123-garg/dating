@@ -1,0 +1,17 @@
+.aquablog{
+    &__content{
+        padding: 100px 0px;
+    }
+    &__text{
+            & ul li{             
+                   font-size: 13px;            
+            }
+            & .card{
+                background-color: transparent;
+                border: none;
+            }
+     
+    }
+    #more {display: none;
+    }    
+}

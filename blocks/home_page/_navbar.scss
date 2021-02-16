@@ -1,0 +1,61 @@
+.navbar{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .navbar-dark {
+        & .navbar-nav{
+            & .dropdown-item{
+                font-size: 13px;        
+            }
+            & .nav-link{
+                color: $text-color;        
+                &:hover{
+                   background-color:$theme-secondary;
+                    border-radius: 5px;
+                }
+        }       
+    }
+    }
+    & .navbar-brand{
+        & img{
+            width: 80%;
+            height: auto;
+        }
+    }
+    /*image class for jquery*/
+    & .abc{
+        & img{
+            width: 50%;
+            height: auto;
+        }
+    }
+    &__button{
+        & a{
+            font-size: 13px;
+        }
+    }
+    .navbar__bg__hover{
+        background-color: rgba(0,0,0,0.5);
+      }
+}
+
+
+
+/*Large devices (desktops, 992px and up)*/
+@media (max-width: 1200.98px) 
+{
+     .navbar{
+       background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHJC90KhCQbfLLE4VoFhoITL0Wp1Snum49kQ&usqp=CAU');
+       background-repeat: no-repeat;
+       background-size: cover;
+       padding-top: 0px;
+       padding-bottom: 10px;
+    & .navbar-toggler-icon{
+        width: 1em;
+        height: 1em;
+        & .navbar-toggler{
+            margin: 0 10px;
+        }
+    }
+ }
+    
+}
