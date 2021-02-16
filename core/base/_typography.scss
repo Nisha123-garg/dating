@@ -1,0 +1,294 @@
+.blocknumber {
+    display: block;
+    position: relative;
+    margin: 15px 0;
+    font-size: 110%;
+    line-height: 1.8rem;
+    min-height: 50px;
+    padding: 10px 0 0 65px;
+}
+.bignumber {
+    padding: 10px;
+    display: block;
+    top: 0px;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    height: 1.8rem;
+    text-align: center;
+    width: 1.8rem;
+    position: absolute;
+}
+
+/* assign list-check class to ul to have checkmark with each li */
+.list-check li::before {
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    line-height: 1em;
+    content: "\f00c";
+    margin-right: 10px;
+    color: #50c787;
+}
+.list-lg li {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+address {
+    display: block;
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 20px;
+}
+.lead {
+    font-size: 120%;
+    font-weight: 200;
+    line-height: 30px;
+}
+
+/*! display a floating icon with button  */
+.btn-theme-icon {    
+    @include respond(phone) {
+        text-align: center;
+    }
+    a {
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        font-weight: 400;
+        -webkit-align-items: center;
+        align-items: center;
+        position: relative;
+        transition: all .3s;
+        padding-top: 5px !important;
+        &:after {
+            font-family: 'Font Awesome 5 Free' !important;
+            font-weight: 900;
+            content: '\f061';
+            position: relative;
+            padding-left: 0.4rem;
+            padding-top: 5px;
+        }
+        &:hover:after {
+            transition: all .3s;
+            padding-left: .6rem;
+        }
+    }
+    &-link {
+    	&:after {
+			font-family: 'Font Awesome 5 Free' !important;
+			font-weight: 900;
+			content: '\f061';
+		    position: relative;
+		    opacity: 0;
+		    font-size: inherit;
+		    text-align: center;
+		    transition: all .3s;
+		    margin-left: -1.3rem;
+		    padding-left: .5rem;
+    	}
+    	&:hover:after {
+		    transition: all .3s;
+		    opacity: 1;
+		    margin-left: 0;
+		}
+    }
+}
+
+/*! Dynamic Jarallax Overlay */
+.jarallax-overlay {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    opacity: 0.7;
+    background-color: rgb(255, 255, 255);
+}
+
+/*! Image Radius within a DIV */
+.block-img {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    -webkit-align-self: center;
+    align-self: center;
+    & img {
+	    border-radius: .25rem;
+	    display: block;
+	    width: 100%;
+	}
+}
+
+/*! Video Play Button */
+.btn-play {
+ 	box-shadow: 2px 8px 20px rgba(115, 128, 157, 0.3);
+  	-webkit-flex-shrink: 0;
+  	flex-shrink: 0;
+  	position: relative;
+  	background: #ff4f7b;
+  	width: 60px;
+  	height: 60px;
+  	border: 1px solid #ff4f7b;
+  	-webkit-border-radius: 50px;
+  	border-radius: 50px;
+  	text-align: center;
+  	line-height: 60px;
+  	font-size: 27px;
+  	cursor: pointer;
+  	display: inline-flex;
+  	-webkit-justify-content: center;
+  	justify-content: center;
+  	-webkit-align-items: center;
+  	align-items: center;
+  	-webkit-transition: 0.15s ease-in-out;
+  	transition: 0.15s ease-in-out;
+  	-webkit-transition-property: color, background, border-color;
+  	transition-property: color, background, border-color;
+  	& .play {
+	 	width: 0;
+	  	height: 0;
+	  	border-style: solid;
+	  	border-width: 10px 0 10px 15px;
+	  	border-color: transparent transparent transparent #ffffff;
+	  	margin-right: -3px;
+	}
+}
+
+/*! Full-screen */
+.fullscreen-mode {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-items: center;
+    min-height: 100vh;
+    padding-top: 3rem;
+    padding-bottom: 3rem
+}
+
+/*! Background Overlay */
+.bg-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 0;
+    width: 100%;
+}
+
+/* Icon Circle */
+.circle-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+    font-size: 25px;
+    overflow: hidden;
+}
+.ft-circle {
+    text-align: center;
+	width: 76px;
+	height: 76px;
+	border: 1px solid #fff;
+	border-radius: 100%;
+	margin-right: 7px; /*space between*/
+
+} 
+.ft-circle i {
+	font-size: 40px;
+    line-height: 78px;
+	color: #fff;
+}
+h3.h5 {
+	line-height: 1.8rem;
+}
+/* display text between two lines */
+.heading-with-lines {
+	font-size: 2rem;
+	font-weight: 400;
+	margin: 0 auto 0.2em auto;
+	color: #E4CB62 !important;
+	&:before, &:after {
+	  background-color: #E4CB62;
+	  content: "";
+	  display: inline-block;
+	  height: 4px;
+	  position: relative;
+	  vertical-align: middle;
+	  width: 12%;
+	}
+}
+.heading-with-lines:before {
+	right: 0.5em;
+  	margin-left: -50%;
+}	
+.heading-with-lines:after {
+  	left: 0.5em;
+ 	margin-right: -50%;
+}
+
+/* display play button on video image */
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px;
+  &:before {
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    position:absolute;
+    content: "\f04b";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #c4302b;
+    opacity: 0.8;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);    
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: #444;
+  }
+  &:hover:before {
+    color: #eee;
+  }
+}
+
+/* color overlay on the background image */
+.banner-overlay {
+    position: relative;
+    padding: 80px 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        background: rgba(0,0,0,.5);
+    }
+}
+.contactpage-overlay{
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        background: $theme-primary;
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,25 @@
+$theme-primary:					#0296c0;					//** Button/Link Primary Color
+$theme-primary-hover:			#1FA8D1;					//** Button/Link Hover Color
+$theme-primary-text:			#ffffff;					//** Button/Link Text Color
+$theme-primary-text-hover:		#ffffff;					//** Button/Link Text Hover Color
+$theme-secondary:				#1FA8D1;
+$theme-secondary-hover:			#ffffff;
+$theme-secondary-text:			#ffffff;
+$theme-secondary-text-hover:    #1FA8D1;
+$theme-tertiary:				#ed0058;
+$theme-tertiary-hover:			#ffffff;
+$theme-tertiary-text:			#ffffff;
+$theme-tertiary-text-hover:		#ed0058;
+$theme-quaternary:				transparent;
+$theme-quaternary-hover:	    #ed0058;
+$theme-quaternary-text:			#ed0058;
+$theme-quaternary-text-hover:	#e2c60c;
+$theme-quinary:					#818a8f;
+$theme-quinary-hover:			#818a8f;	
+$theme-quinary-text:			#ffffff;
+$theme-quinary-text-hover:		#ff5e14;
+$text-color:            		#ffffff; 					//** Global textual color.
+$link-color:            		#1FA8D1; 					//** Link hover color set via `darken()` function.
+$link-hover-color:      		darken($link-color, 15%);  	//** Link hover decoration.
+$font-custom:			  		Arial;
+$body-bg:						#fefefe;

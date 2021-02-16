@@ -1,0 +1,166 @@
+@mixin a($link-color, $link-hover-color, $link-hover-decoration) {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+@mixin button($text-color, $body-bg, $custom-quaternary) {
+  color: $text-color;
+  background-color: $body-bg;
+  &:focus,
+  &.focus {
+    color: $text-color;
+    background-color: darken($body-bg, 10%);
+        border-color: darken($custom-quaternary, 25%);
+  }
+  &:hover,
+  &:active,
+  &.active {
+    color: $text-color;
+    background-color: darken($body-bg, 10%);
+        border-color: darken($custom-quaternary, 12%);
+  }
+}
+@mixin icon($text-color, $body-bg, $theme-primary, $theme-secondary) {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+	font-size: 14px;
+	text-align: center;	
+	padding-top: 8px;
+	padding-left: 0px;
+	border-radius:50%;	
+	height: 30px;
+	width: 30px;
+	background-color: $body-bg;
+    color: $text-color;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2), 4px 4px 4px rgba(0, 0, 0, 0.1), 4px 4px 4px rgba(0, 0, 0, 0.15), -1px -1px 0 rgba(255, 255, 255, 0.2);
+	&:focus,
+	&.focus {
+		color: $theme-primary;
+	    background-color: $theme-secondary;
+	        border-color: $theme-secondary;
+	}
+	&:hover,
+	&:active,
+	&.active {
+		color: $theme-primary;
+	    background-color: $theme-secondary;
+	        border-color: $theme-secondary;
+	}
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:		Phone
+600 - 900px:	Tablet Portrait
+900	- 1200px:	Tablet Landscape
+[1200-1800] is where our normal styles apply
+1800px +:		Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 37.5em) { @content }; // 600px
+	}
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width: 56.25em) { @content }; // 900px
+	}
+	@if $breakpoint == tab-land {
+		@media only screen and (max-width: 75em) { @content }; // 1200px
+	}
+	@if $breakpoint == big-desktop {
+		@media only screen and (max-width: 112.5em) { @content }; // 1800px
+	}
+}
+
+@mixin respond-min($breakpoint) {
+	@if $breakpoint == phone {
+		@media only screen and (min-width: 37.5em) { @content }; // 600px
+	}
+	@if $breakpoint == tab-port {
+		@media only screen and (min-width: 56.25em) { @content }; // 900px
+	}
+	@if $breakpoint == tab-land {
+		@media only screen and (min-width: 75em) { @content }; // 1200px
+	}
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: 112.5em) { @content }; // 1800px
+	}
+}
+
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $hover-color, $hover-background) {
+  color: $color !important;
+  background-color: $background;
+  border-color: darken($background, 2%);
+  
+  .fa {
+  	color: $color;
+  	&:hover {
+  		color: $hover-color;
+  	}
+  }
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($background, 2%);
+  }
+  &:hover {
+    color: $hover-color !important;
+    background-color: $hover-background !important;
+        border-color: darken($hover-background, 12%) !important;
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($background, 2%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+    	color: $hover-color;
+    	background-color: $hover-background;
+        	border-color: darken($hover-background, 2%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: darken($background, 2%);
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
